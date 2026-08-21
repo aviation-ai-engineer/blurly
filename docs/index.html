@@ -5,28 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Blurly — Privacy Policy</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #667781;
+    --surface: #f6f8f9;
+    --border: #e3e8ea;
+    --link: #128c3e;
+  }
+  /* Dark overrides live at the end of the cascade so nothing later re-lights them. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111b21;
+      --text: #e9edef;
+      --muted: #8696a0;
+      --surface: #1f2c33;
+      --border: #2a3942;
+      --link: #25d366;
+    }
+  }
   body {
     max-width: 720px; margin: 0 auto; padding: 48px 24px 96px;
     font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #ffffff; color: #1a1a1a;
+    background: var(--bg); color: var(--text);
   }
-  @media (prefers-color-scheme: dark) {
-    body { background: #111b21; color: #e9edef; }
-    a { color: #25d366; }
-    .box { background: #1f2c33; border-color: #2a3942; }
-    th { background: #1f2c33; }
-    td, th { border-color: #2a3942; }
-  }
+  a { color: var(--link); }
   h1 { font-size: 30px; margin: 0 0 4px; }
   h2 { font-size: 20px; margin: 36px 0 10px; }
-  .sub { color: #667781; margin: 0 0 32px; }
-  .box { background: #f6f8f9; border: 1px solid #e3e8ea; border-radius: 10px; padding: 16px 20px; margin: 24px 0; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  .box {
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 20px; margin: 24px 0;
+  }
   table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-  td, th { border: 1px solid #e3e8ea; padding: 9px 12px; text-align: left; vertical-align: top; font-size: 15px; }
-  th { background: #f6f8f9; }
+  td, th {
+    border: 1px solid var(--border); padding: 9px 12px;
+    text-align: left; vertical-align: top; font-size: 15px;
+  }
+  th { background: var(--surface); }
   code { font-size: 14px; }
-  footer { margin-top: 48px; font-size: 14px; color: #667781; }
+  footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
 </style>
 </head>
 <body>
