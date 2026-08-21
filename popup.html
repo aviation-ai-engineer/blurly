@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="wwb-header">
+    <span class="wwb-logo">🫥 Blurly</span>
+  </header>
+
+  <main id="wwb-main">
+    <div id="wwb-state-ready" class="wwb-panel wwb-hidden">
+      <div class="wwb-row">
+        <div>
+          <div class="wwb-label">Blur chats</div>
+          <div class="wwb-sub">Hover to reveal · Ctrl+Shift+Y</div>
+        </div>
+        <label class="wwb-switch">
+          <input type="checkbox" id="wwb-toggle" />
+          <span class="wwb-slider"></span>
+        </label>
+      </div>
+
+      <div class="wwb-row wwb-row-stack">
+        <div>
+          <div class="wwb-label">Presenting mode</div>
+          <div class="wwb-sub">Safe for screen sharing — hover can't reveal anything. Ctrl+Shift+U</div>
+        </div>
+        <label class="wwb-switch">
+          <input type="checkbox" id="wwb-present" />
+          <span class="wwb-slider"></span>
+        </label>
+      </div>
+
+      <div class="wwb-hint">Sharing your screen? Turn on Presenting mode — it stays covered even if your mouse crosses the chat list.</div>
+
+      <div class="wwb-pro" id="wwb-pro-section">
+        <div class="wwb-pro-head">
+          <span>Work through the call</span>
+          <span class="wwb-badge" id="wwb-pro-badge">PRO</span>
+        </div>
+
+        <div class="wwb-row wwb-row-stack">
+          <div>
+            <div class="wwb-label">Spotlight this chat</div>
+            <div class="wwb-sub">Show the one thread you're discussing. Every other client stays hidden. Ctrl+Shift+G</div>
+          </div>
+          <label class="wwb-switch">
+            <input type="checkbox" id="wwb-spotlight" />
+            <span class="wwb-slider"></span>
+          </label>
+        </div>
+
+        <div class="wwb-row wwb-row-stack">
+          <div>
+            <div class="wwb-label">Alias names</div>
+            <div class="wwb-sub">Names and photos become "Client A", "Client B". Share the conversation, not the identity. Ctrl+Shift+K</div>
+          </div>
+          <label class="wwb-switch">
+            <input type="checkbox" id="wwb-alias" />
+            <span class="wwb-slider"></span>
+          </label>
+        </div>
+
+        <div class="wwb-gate">
+          <button id="wwb-unlock" class="wwb-cta wwb-unlock">Get Pro — INR 199 one-time, no subscription</button>
+          <div class="wwb-note">Emailed to you after purchase — use a real email at checkout. No account, no network calls.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wwb-state-wrongsite" class="wwb-panel wwb-hidden wwb-empty">
+      <div class="wwb-empty-icon">🔗</div>
+      <div class="wwb-empty-text">Open WhatsApp Web to use the blur toggle here.</div>
+      <button id="wwb-open-wa" class="wwb-cta">Open web.whatsapp.com</button>
+    </div>
+
+    <div id="wwb-state-superseded" class="wwb-panel wwb-hidden wwb-empty">
+      <div class="wwb-empty-icon">✅</div>
+      <div class="wwb-empty-text"><strong>Blurly Pro is running.</strong><br />This free copy has stepped aside so the two don't fight over the same page. Use the Pro popup — or remove this one.</div>
+    </div>
+
+    <div id="wwb-state-error" class="wwb-panel wwb-hidden wwb-empty">
+      <div class="wwb-empty-icon">⚠️</div>
+      <div class="wwb-empty-text">Couldn't reach this tab. Reload WhatsApp Web and try again.</div>
+    </div>
+  </main>
+
+  <div id="wwb-toast" class="wwb-toast wwb-hidden"></div>
+
+  <footer class="wwb-footer">Built by Anshit · <a href="https://rzp.io/rzp/SRLCfoV" target="_blank" rel="noopener">Get Pro — INR 199</a></footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
