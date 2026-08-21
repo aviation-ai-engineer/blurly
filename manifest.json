@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Blurly — Privacy Screen for WhatsApp Web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Blur your WhatsApp Web chats so nobody on your screen share can read them. Hover to reveal, one key to hide everything.",
   "icons": {
     "16": "icons/icon16.png",

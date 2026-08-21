@@ -156,14 +156,24 @@ not user activity, not website content. The extension makes zero network request
 - I do not use or transfer user data for purposes unrelated to my item's single purpose
 - I do not use or transfer user data to determine creditworthiness or for lending purposes
 
-**Privacy policy URL:** if the console insists on one, host a short page saying
-"Blurly collects no data, transmits no data, and makes no network requests." A
-GitHub Gist or GitHub Pages file is enough.
+**Privacy policy URL** (live):
+```
+https://aviation-ai-engineer.github.io/blurly/
+```
+Source: https://github.com/aviation-ai-engineer/blurly (docs/index.html)
+
+**Support email:** anshitcrext@gmail.com — the address the Chrome Web Store
+account is registered with. Same address is on the privacy policy page.
 
 ## DISTRIBUTION tab
 
 - **Visibility:** Public (or Unlisted if you want to share the link privately first)
 - **Distribution:** all regions — there is no country targeting for free items
-- **Pricing:** Free (Chrome Web Store payments no longer exist; Pro is sold off-store via Razorpay)
+- **Pricing:** Free — the extension costs nothing to install.
+- **In-app purchases: YES.** These are separate fields, not alternatives. Nothing is
+  bought or unlocked inside the extension (Razorpay takes payment on an external page
+  and Pro is a separate install), so leaving it unchecked is arguable — but the popup
+  does show locked features and a buy button, so a purchase can be *started* from
+  inside. Disclosing costs nothing; under-disclosing risks a misleading-listing strike.
 
 Then **Submit for review**.
