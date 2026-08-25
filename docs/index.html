@@ -3,119 +3,228 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Privacy policy for Blurly and Blurly Pro, the local privacy-screen extensions for WhatsApp Web." />
+<meta name="theme-color" content="#080d24" />
 <title>Blurly — Privacy Policy</title>
+<link rel="icon" type="image/png" href="icon128.png" />
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --muted: #667781;
-    --surface: #f6f8f9;
-    --border: #e3e8ea;
-    --link: #128c3e;
+    --bg: #f6f7ff;
+    --text: #172039;
+    --muted: #65708c;
+    --surface: #ffffff;
+    --surface-strong: #f0f2ff;
+    --border: #dfe3f3;
+    --violet: #7657f6;
+    --cyan: #1aaed4;
+    --mint: #15956f;
+    --hero: #080d24;
+    --hero-text: #f8fbff;
+    --hero-muted: #b9c4e3;
+    --shadow: 0 18px 50px rgba(29, 32, 73, .10);
   }
-  /* Dark overrides live at the end of the cascade so nothing later re-lights them. */
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #111b21;
-      --text: #e9edef;
-      --muted: #8696a0;
-      --surface: #1f2c33;
-      --border: #2a3942;
-      --link: #25d366;
+      --bg: #070b1b;
+      --text: #edf2ff;
+      --muted: #a6b1ce;
+      --surface: #10162c;
+      --surface-strong: #171c3b;
+      --border: #293252;
+      --violet: #a184ff;
+      --cyan: #43d7ff;
+      --mint: #48e2b4;
+      --hero: #0b1028;
+      --hero-text: #f8fbff;
+      --hero-muted: #b9c4e3;
+      --shadow: none;
     }
   }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    max-width: 720px; margin: 0 auto; padding: 48px 24px 96px;
-    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg); color: var(--text);
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.68 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
-  a { color: var(--link); }
-  h1 { font-size: 30px; margin: 0 0 4px; }
-  h2 { font-size: 20px; margin: 36px 0 10px; }
-  .sub { color: var(--muted); margin: 0 0 32px; }
-  .box {
-    background: var(--surface); color: var(--text);
-    border: 1px solid var(--border); border-radius: 10px;
-    padding: 16px 20px; margin: 24px 0;
+  a { color: var(--cyan); text-underline-offset: 3px; }
+  .wrap { width: min(880px, calc(100% - 32px)); margin: 0 auto; }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    margin: 24px auto 40px;
+    padding: 44px 46px;
+    border-radius: 28px;
+    color: var(--hero-text);
+    background:
+      radial-gradient(circle at 10% 0%, rgba(126, 88, 255, .42), transparent 38%),
+      radial-gradient(circle at 100% 10%, rgba(37, 217, 255, .20), transparent 33%),
+      linear-gradient(135deg, var(--hero), #11102d);
+    box-shadow: var(--shadow);
   }
-  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-  td, th {
-    border: 1px solid var(--border); padding: 9px 12px;
-    text-align: left; vertical-align: top; font-size: 15px;
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 34px; }
+  .brand img { width: 54px; height: 54px; border-radius: 14px; }
+  .brand strong { display: block; font-size: 20px; letter-spacing: .01em; }
+  .brand span { color: var(--hero-muted); font-size: 13px; }
+  h1 { max-width: 660px; margin: 0; font-size: clamp(38px, 6vw, 62px); line-height: 1.04; letter-spacing: -.035em; }
+  .lead { max-width: 690px; margin: 20px 0 0; color: var(--hero-muted); font-size: 18px; }
+  .meta { margin-top: 24px; color: var(--hero-muted); font-size: 13px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .badge {
+    padding: 7px 11px;
+    border: 1px solid rgba(131, 225, 211, .45);
+    border-radius: 999px;
+    color: #9ff6dc;
+    background: rgba(24, 137, 116, .13);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .035em;
+    text-transform: uppercase;
   }
-  th { background: var(--surface); }
-  code { font-size: 14px; }
-  footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
+  main { padding-bottom: 72px; }
+  .summary {
+    margin-bottom: 28px;
+    padding: 22px 24px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--violet);
+    border-radius: 14px;
+    background: var(--surface-strong);
+  }
+  .summary strong { display: block; margin-bottom: 4px; }
+  section {
+    margin: 18px 0;
+    padding: 28px 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  h2 { margin: 0 0 12px; font-size: 23px; line-height: 1.25; letter-spacing: -.015em; }
+  h3 { margin: 24px 0 7px; font-size: 17px; }
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 10px 0 0; padding-left: 22px; }
+  li + li { margin-top: 7px; }
+  code {
+    padding: 2px 5px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--surface-strong);
+    font-size: 14px;
+  }
+  .table-wrap { overflow-x: auto; margin-top: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 12px 14px; border: 1px solid var(--border); text-align: left; vertical-align: top; font-size: 14px; }
+  th { background: var(--surface-strong); }
+  .note { color: var(--muted); font-size: 14px; }
+  footer { padding: 0 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
+  @media (max-width: 640px) {
+    .hero { margin-top: 12px; padding: 30px 24px; border-radius: 20px; }
+    .brand { margin-bottom: 25px; }
+    section { padding: 23px 20px; border-radius: 15px; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Blurly — Privacy Policy</h1>
-<p class="sub">Applies to the Chrome extension <strong>Blurly — Privacy Screen for WhatsApp Web</strong>. Last updated 21 August 2026.</p>
+<header class="hero wrap">
+  <div class="brand">
+    <img src="icon128.png" alt="Blurly icon" />
+    <div><strong>Blurly</strong><span>Screen-share privacy for WhatsApp Web</span></div>
+  </div>
+  <h1>Privacy should not require trust. It should require no data.</h1>
+  <p class="lead">This policy explains exactly what the Blurly Free and Blurly Pro extensions access, what stays on your device, and what is never collected.</p>
+  <div class="badges">
+    <span class="badge">Local processing</span>
+    <span class="badge">Zero tracking</span>
+    <span class="badge">WhatsApp Web only</span>
+  </div>
+  <p class="meta">Effective and last updated: 25 August 2026</p>
+</header>
 
-<div class="box">
-  <strong>The short version:</strong> Blurly collects nothing, stores nothing about you,
-  and sends nothing anywhere. It has no servers, no accounts and no analytics. Your
-  messages, contacts and photos never leave your browser.
-</div>
+<main class="wrap">
+  <div class="summary">
+    <strong>The short version</strong>
+    The Blurly extensions do not collect or transmit your messages, contacts, photos, browsing history, identity, or usage data. They have no analytics, account system, tracking service, or developer-operated backend. Privacy controls run locally in your browser.
+  </div>
 
-<h2>What Blurly does</h2>
-<p>
-  Blurly applies a CSS blur over the WhatsApp Web chat list and open conversation so
-  people near your screen can't read them. Hovering a blurred area reveals it while your
-  cursor is there, and keyboard shortcuts toggle blur or hide everything instantly. It
-  runs only on <code>web.whatsapp.com</code>.
-</p>
+  <section>
+    <h2>What Blurly does</h2>
+    <p>Blurly provides visual privacy controls for <code>web.whatsapp.com</code>. Everyday Blur covers the chat list, open conversation, drawers, and transient overlays, with hover-to-reveal access. Presenting Mode places WhatsApp Web behind an opaque curtain that hovering cannot reveal.</p>
+    <p>Blurly Pro includes the same protections and adds:</p>
+    <ul>
+      <li><strong>Spotlight Mode:</strong> keeps the current conversation usable while the surrounding chat list and other private areas remain hidden.</li>
+      <li><strong>Alias Mode:</strong> replaces visible contact names with temporary labels such as “Client A” and blurs avatars.</li>
+    </ul>
+    <p class="note">Blurly provides visual privacy against shoulder-surfing and accidental screen-share exposure. It is not encryption, access control, or protection against someone who can inspect or control your browser.</p>
+  </section>
 
-<h2>Data we collect</h2>
-<p>None. Blurly does not collect, record, transmit, sell or share any data — including
-personally identifiable information, message content, contact names or photos, browsing
-history, location, or usage analytics. There is no crash or telemetry reporting.</p>
+  <section>
+    <h2>Data the extensions collect</h2>
+    <p><strong>None.</strong> Neither Blurly Free nor Blurly Pro collects, records, transmits, sells, or shares personal or sensitive user data. This includes personal communications, names, profile photos, media, website content, browsing activity, location, identifiers, and analytics.</p>
+    <p>There is no telemetry, crash reporting, advertising identifier, behavioral tracking, fingerprinting, or remote logging.</p>
+  </section>
 
-<h2>Data stored on your device</h2>
-<p>
-  Blurly saves a few true/false settings using Chrome's <code>storage.local</code> API —
-  whether blur is on, and whether presenting mode is on. These stay in your own browser,
-  are never transmitted, and are deleted when you uninstall the extension. No message
-  content or contact information is ever stored.
-</p>
+  <section>
+    <h2>Information processed locally</h2>
+    <p>To apply privacy effects, Blurly necessarily interacts with the WhatsApp Web page displayed in your browser. This processing happens on your device. Page content is not copied to the developer and is not sent to any server by the extension.</p>
 
-<h2>Network activity</h2>
-<p>
-  Blurly makes zero network requests. All code and styling ship inside the extension
-  package; nothing is fetched, downloaded or executed from a remote source.
-</p>
+    <h3>Settings stored in Chrome</h3>
+    <p>Blurly stores a small set of true/false settings using Chrome's <code>storage.local</code> API, including whether Everyday Blur, Presenting Mode, Spotlight Mode, or Alias Mode is enabled. An internal boolean may also record that the Free edition has stepped aside because Pro is running.</p>
+    <p>These settings contain no messages, contact names, photos, media, account identifiers, or browsing history. They remain in the local Chrome profile until changed or the extension is uninstalled.</p>
 
-<h2>Permissions</h2>
-<table>
-  <tr><th>Permission</th><th>Why it is needed</th></tr>
-  <tr><td><code>storage</code></td><td>Remembers your on/off settings across tabs and restarts.</td></tr>
-  <tr><td><code>activeTab</code></td><td>Lets the popup tell whether the current tab is WhatsApp Web, so it can show the right controls.</td></tr>
-  <tr><td><code>web.whatsapp.com</code></td><td>The blur script must run on WhatsApp Web. No other website is accessed.</td></tr>
-</table>
+    <h3>Pro aliases stay in memory</h3>
+    <p>When Alias Mode is enabled, visible names are mapped to temporary labels in page memory so the same contact keeps the same alias during that session. Real names and the alias map are not written to Chrome storage. The in-memory map disappears when the page or extension session ends.</p>
+  </section>
 
-<h2>Blurly Pro</h2>
-<p>
-  Blurly Pro is a separate paid build, not an in-app unlock. Payments are processed by
-  <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Razorpay</a>, who
-  collect the email address and phone number you enter at their checkout under their own
-  privacy policy. That email is used solely to send you the Pro build and to answer
-  support about your purchase. It is not used for marketing and is not shared with anyone
-  else. The free extension itself never sees or transmits this information — clicking
-  "Get Pro" simply opens the Razorpay page in a new tab.
-</p>
+  <section>
+    <h2>Network activity and remote code</h2>
+    <p>The Blurly extensions make no programmatic network requests. All JavaScript and CSS required for their functionality ship inside the extension packages. They do not fetch or execute remote code.</p>
+    <p>WhatsApp Web itself continues to communicate with WhatsApp's services independently of Blurly. Blurly does not intercept, proxy, or control that communication.</p>
+  </section>
 
-<h2>Children</h2>
-<p>Blurly is not directed at children and collects no data from anyone, regardless of age.</p>
+  <section>
+    <h2>Permissions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Why Blurly needs it</th></tr></thead>
+        <tbody>
+          <tr><td><code>storage</code></td><td>Remembers the privacy-mode on/off settings locally across tabs and browser restarts.</td></tr>
+          <tr><td><code>activeTab</code></td><td>Lets the popup determine whether the current tab is WhatsApp Web so it can show working controls or the correct open-site message.</td></tr>
+          <tr><td><code>https://web.whatsapp.com/*</code></td><td>Allows the packaged privacy script and styling to run on WhatsApp Web. Blurly requests no other website host.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-<h2>Changes</h2>
-<p>If this policy changes, the updated version will be posted on this page with a new date above.</p>
+  <section>
+    <h2>Blurly Pro purchases</h2>
+    <p>Blurly Pro is a separate paid installation, not an account-based or network-activated unlock. Selecting “Get Pro” in the Free extension opens a Razorpay-hosted checkout page in a new tab. The Free extension does not read, collect, or transmit the information entered there.</p>
+    <p>Razorpay processes payment and checkout information under its own <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">privacy policy</a>. The developer may receive the buyer contact and transaction details Razorpay makes available so the Pro build can be delivered and purchase support can be provided. Those details are not obtained from WhatsApp Web and are not used by the extension.</p>
+  </section>
 
-<h2>Contact</h2>
-<p>Questions about this policy or the extension: <a href="mailto:anshitcrext@gmail.com">anshitcrext@gmail.com</a></p>
+  <section>
+    <h2>Limited use and sharing</h2>
+    <p>Blurly does not use or transfer user data for advertising, personalization, creditworthiness, lending, data brokerage, or any purpose unrelated to its privacy-screen functionality. Because the extensions do not transmit WhatsApp Web content to the developer, the developer cannot read or share that content.</p>
+  </section>
 
-<footer>Blurly is built by Anshit. This page is the official privacy policy for the Chrome Web Store listing.</footer>
+  <section>
+    <h2>Children, changes, and contact</h2>
+    <p>Blurly is not directed at children and the extensions do not collect data from anyone, regardless of age.</p>
+    <p>If Blurly's data practices change, this page will be updated before or when the change is released, with a revised date above.</p>
+    <p>For privacy questions, data inquiries, purchase support, or deletion requests concerning information you directly provided during a Pro purchase, contact <a href="mailto:anshitcrext@gmail.com">anshitcrext@gmail.com</a>.</p>
+  </section>
+
+  <section>
+    <h2>Independent product notice</h2>
+    <p>Blurly is an independent browser extension and is not affiliated with, endorsed by, or sponsored by WhatsApp LLC or Meta Platforms, Inc.</p>
+    <p><a href="https://chromewebstore.google.com/detail/blurly-%E2%80%94-privacy-screen-f/phffndgpcpjbkjemdfldenhpmnolhohi" target="_blank" rel="noopener">View Blurly on the Chrome Web Store</a></p>
+  </section>
+</main>
+
+<footer class="wrap">Official privacy policy for Blurly Free and Blurly Pro · Built by Anshit</footer>
 
 </body>
 </html>
