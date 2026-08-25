@@ -68,7 +68,8 @@
   .brand img { width: 54px; height: 54px; border-radius: 14px; }
   .brand strong { display: block; font-size: 20px; letter-spacing: .01em; }
   .brand span { color: var(--hero-muted); font-size: 13px; }
-  h1 { max-width: 660px; margin: 0; font-size: clamp(38px, 6vw, 62px); line-height: 1.04; letter-spacing: -.035em; }
+  h1 { margin: 0; font-size: clamp(36px, 4.2vw, 48px); line-height: 1.08; letter-spacing: -.035em; }
+  .headline-line { display: block; white-space: nowrap; }
   .lead { max-width: 690px; margin: 20px 0 0; color: var(--hero-muted); font-size: 18px; }
   .meta { margin-top: 24px; color: var(--hero-muted); font-size: 13px; }
   .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
@@ -123,6 +124,7 @@
   @media (max-width: 640px) {
     .hero { margin-top: 12px; padding: 30px 24px; border-radius: 20px; }
     .brand { margin-bottom: 25px; }
+    .headline-line { white-space: normal; }
     section { padding: 23px 20px; border-radius: 15px; }
   }
 </style>
@@ -134,7 +136,7 @@
     <img src="icon128.png" alt="Blurly icon" />
     <div><strong>Blurly</strong><span>Screen-share privacy for WhatsApp Web</span></div>
   </div>
-  <h1>Privacy Shouldn’t Require Trust. It Shouldn’t Require Your Data.</h1>
+  <h1><span class="headline-line">Privacy Should Not Require Trust.</span><span class="headline-line">Privacy Should Not Require Data.</span></h1>
   <p class="lead">This policy explains exactly what the Blurly Free and Blurly Pro extensions access, what stays on your device, and what is never collected.</p>
   <div class="badges">
     <span class="badge">Local processing</span>
